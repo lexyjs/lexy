@@ -28,8 +28,8 @@
     "dist"
   ],
   "keywords": [
-    "lexy",
     "scanner",
+    "lexer",
     "parser",
     "compiler",
     "generator"
