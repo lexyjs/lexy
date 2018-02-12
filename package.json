@@ -1,6 +1,6 @@
 {
   "name": "lexy",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "description": "A JavaScript-based Compiler Generator",
   "author": "Gary Doublé <garydouble@live.com>",
   "license": "ISC",
@@ -16,12 +16,18 @@
   "main": "dist/lexy.js",
   "module": "src/index.js",
   "scripts": {
-    "clean": "@rimraf -rf dist",
-    "lint": "@eslint src/**/*.js test/**/*.js rollup.*.config.js rollup.config.js",
-    "compile": "@rollup -c",
-    "build": "@npm run lint && npm run compile",
-    "test": "@mocha test --reporter list",
-		"dist": "npm run clean && npm run build && npm run test"
+    "clean": "rimraf -rf dist",
+    "lint": "eslint src/**/*.js test/**/*.js rollup.*.js",
+    "compile": "rollup -c",
+    
+    "prebuild": "npm run clean",
+    "build": "npm run lint && npm run compile",
+    
+    "pretest": "npm run build",
+    "test": "mocha test --reporter list",
+
+    "travis-deploy-once": "travis-deploy-once",
+    "semantic-release": "semantic-release"
   },
   "files": [
     "src",
@@ -42,6 +48,8 @@
     "rimraf": "^2.6.2",
     "rollup": "^0.55.1",
     "rollup-plugin-buble": "^0.18.0",
-    "rollup-plugin-uglify": "^3.0.0"
+    "rollup-plugin-uglify": "^3.0.0",
+    "travis-deploy-once": "^4.3.4",
+    "semantic-release": "^12.4.1"
   }
 }
