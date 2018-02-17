@@ -48,8 +48,6 @@
     "rimraf": "^2.6.2",
     "rollup": "^0.55.1",
     "rollup-plugin-buble": "^0.18.0",
-    "rollup-plugin-uglify": "^3.0.0",
-    "travis-deploy-once": "^4.3.4",
-    "semantic-release": "^12.4.1"
+    "rollup-plugin-uglify": "^3.0.0"
   }
 }
