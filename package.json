@@ -19,13 +19,10 @@
     "clean": "rimraf -rf dist",
     "lint": "eslint src/**/*.js test/**/*.js rollup.*.js",
     "compile": "rollup -c",
-    
     "prebuild": "npm run clean",
     "build": "npm run lint && npm run compile",
-    
     "pretest": "npm run build",
     "test": "mocha test --reporter list",
-
     "travis-deploy-once": "travis-deploy-once",
     "semantic-release": "semantic-release"
   },
