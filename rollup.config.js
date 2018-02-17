@@ -2,6 +2,8 @@
 import buble from 'rollup-plugin-buble';
 import uglify from 'rollup-plugin-uglify';
 
+import path from 'path';
+
 export default [{
   input: 'src/index.js',
   output: {
@@ -24,5 +26,15 @@ export default [{
   plugins: [
     buble(),
     uglify()
+  ]
+}, {
+  input: 'test/index.js',
+  output: {
+    file: 'dist/lexy.tests.js',
+    format: 'cjs'
+  },
+  external: [
+    'chai', 
+    path.resolve('./dist/*')
   ]
 }];

@@ -22,7 +22,7 @@
     "prebuild": "npm run clean",
     "build": "npm run lint && npm run compile",
     "pretest": "npm run build",
-    "test": "mocha test --reporter list",
+    "test": "mocha dist/lexy.tests.js --reporter list",
     "travis-deploy-once": "travis-deploy-once",
     "semantic-release": "semantic-release"
   },
