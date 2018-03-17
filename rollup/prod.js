@@ -3,7 +3,7 @@ import buble from 'rollup-plugin-buble';
 import uglify from 'rollup-plugin-uglify';
 
 export default {
-  input: 'src/index.js',
+  input: 'lib/index.js',
   output: {
     file: 'dist/lexy.min.js',
     format: 'umd',

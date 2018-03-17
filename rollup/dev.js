@@ -2,7 +2,7 @@
 import buble from 'rollup-plugin-buble';
 
 export default {
-  input: 'src/index.js',
+  input: 'lib/index.js',
   output: {
     file: 'dist/lexy.js',
     format: 'umd',
