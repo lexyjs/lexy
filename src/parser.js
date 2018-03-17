@@ -13,6 +13,16 @@ class ParseState{
   }
 }
 
+
+class Node {
+  constructor(type, value, nodes = []) {
+    this.type = type;
+    this.value = value;
+    this.nodes = [];
+  }
+}
+
+
 // The parser factory
 export default function parser(lang) {
   
@@ -83,7 +93,7 @@ export default function parser(lang) {
     if (state.cd.length && state.cd[0] === token.type) {
 
       if (!token._shifted) {
-        stack.push(token.value);
+        stack.push(new Node(token.type, token.value));
         token._shifted = true
       }
 
@@ -100,7 +110,7 @@ export default function parser(lang) {
     // When we have reached the rhs of a rule.
     if (!state.cd.length) {
   
-      stack = [[state.x, stack]];
+      stack = [new Node(state.x, null, stack)];
 
       // find the states from table[j] that expected to see this state rule
       let newStates = table[state.j]

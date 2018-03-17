@@ -17,20 +17,16 @@
   "module": "src/index.js",
   "scripts": {
     "clean": "rimraf -rf dist",
-
     "lint": "run-p -s lint:*",
     "lint:src": "eslint src/**/*.js",
     "lint:test": "eslint test/**/*.js",
     "lint:rollup": "eslint rollup/**/*.js",
-
     "build": "run-p -s build:*",
     "build:dev": "rollup -c rollup/dev.js",
     "build:prod": "rollup -c rollup/prod.js",
     "build:test": "rollup -c rollup/test.js",
-
     "test": "run-s clean lint build test:dist",
     "test:dist": "mocha dist/lexy.tests.js --reporter list",
-
     "travis-deploy-once": "travis-deploy-once",
     "semantic-release": "semantic-release"
   },
