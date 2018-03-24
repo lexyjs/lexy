@@ -1,6 +1,6 @@
 {
   "name": "lexy",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "A JavaScript-based Compiler Generator",
   "author": "Gary Doublé <garydouble@live.com>",
   "license": "ISC",
