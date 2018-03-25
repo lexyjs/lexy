@@ -1,6 +1,6 @@
 
-import buble from 'rollup-plugin-buble';
-import uglify from 'rollup-plugin-uglify';
+import buble from 'rollup-plugin-buble'
+import uglify from 'rollup-plugin-uglify'
 
 export default {
   input: 'lib/index.js',
@@ -14,4 +14,4 @@ export default {
     buble(),
     uglify()
   ]
-};
+}

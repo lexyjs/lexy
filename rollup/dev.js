@@ -1,5 +1,5 @@
 
-import buble from 'rollup-plugin-buble';
+import buble from 'rollup-plugin-buble'
 
 export default {
   input: 'lib/index.js',
@@ -12,4 +12,4 @@ export default {
   plugins: [
     buble()
   ]
-};
+}
