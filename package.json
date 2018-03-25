@@ -21,7 +21,7 @@
     "compile:dev": "rollup -c rollup/dev.js",
     "compile:prod": "rollup -c rollup/prod.js",
     "build": "run-p lint compile:*",
-    "test": "mocha test --reporter list",
+    "test": "mocha test",
     "ci": "run-s clean build test"
   },
   "files": [

@@ -22,7 +22,7 @@ describe('scanner', () => {
       new Token('!', '!')
     ]);
   });
-  it('supports "greedy" tokens', () => {
+  it('supports greedy tokens (greedy)', () => {
     let scan = scanner({
       vocabulary: [{ type: 'A', pattern: /a/ }]
     });
@@ -41,7 +41,7 @@ describe('scanner', () => {
       new Token('aaa', 'A')
     ]);
   });
-  it('supports token transforms', () => {
+  it('supports token transforms (transform)', () => {
     let scan = scanner({
       vocabulary: [{ type: 'NUM', pattern: /\d+/, transform: value => parseFloat(value) }]
     });
