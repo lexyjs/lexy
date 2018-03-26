@@ -1,6 +1,6 @@
 
 const expect = require('chai').expect
-const { Token, Node } = require('../dist/lexy')
+const { Token, Node } = require('../lib/lexy')
 
 describe('types', () => {
   it('Token', () => {

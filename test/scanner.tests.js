@@ -1,6 +1,6 @@
 
 const expect = require('chai').expect
-const { Token, scanner } = require('../dist/lexy')
+const { Token, scanner } = require('../lib/lexy')
 
 describe('scanner', () => {
   it('supports empty input', () => {

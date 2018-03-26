@@ -1,17 +1,19 @@
 
-import buble from 'rollup-plugin-buble'
+import babel from 'rollup-plugin-babel'
 import uglify from 'rollup-plugin-uglify'
 
 export default {
-  input: 'lib/index.js',
+  input: 'src/index.js',
   output: {
-    file: 'dist/lexy.min.js',
+    file: 'lib/lexy.min.js',
     format: 'umd',
     name: 'lexy',
     sourcemap: true
   },
   plugins: [
-    buble(),
+    babel({
+      exclude: 'node_modules/**'
+    }),
     uglify()
   ]
 }

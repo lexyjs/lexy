@@ -1,15 +1,17 @@
 
-import buble from 'rollup-plugin-buble'
+import babel from 'rollup-plugin-babel'
 
 export default {
-  input: 'lib/index.js',
+  input: 'src/index.js',
   output: {
-    file: 'dist/lexy.js',
+    file: 'lib/lexy.js',
     format: 'umd',
     name: 'lexy',
     sourcemap: 'inline'
   },
   plugins: [
-    buble()
+    babel({
+      exclude: 'node_modules/**'
+    })
   ]
 }
