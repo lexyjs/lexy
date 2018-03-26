@@ -1,0 +1,24 @@
+language: node_js
+node_js:
+  - '9'
+  - '8'
+  - '6'
+  - '4'
+
+cache:
+  directories:
+    - ~/.npm
+
+notifications:
+  email: false
+
+script: npm run ci
+
+deploy:
+  provider: script
+  script: npm run semantic-release
+  on:
+    tags: false
+    repo: lexyjs/lexy
+    branch: master
+    node: 9

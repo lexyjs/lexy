@@ -1,6 +1,6 @@
 {
   "name": "lexy",
-  "version": "0.2.2",
+  "version": "0.0.0-semantic-release",
   "description": "A JavaScript-based Compiler Generator",
   "author": "Gary Doublé <garydouble@live.com>",
   "license": "ISC",
@@ -22,7 +22,8 @@
     "compile:prod": "rollup -c rollup/prod.js",
     "build": "npm-run-all lint --parallel compile:*",
     "test": "mocha test",
-    "ci": "run-s clean build test"
+    "ci": "run-s clean build test",
+    "semantic-release": "semantic-release"
   },
   "files": [
     "lib",
@@ -33,7 +34,8 @@
     "lexer",
     "parser",
     "compiler",
-    "generator"
+    "generator",
+    "cfg"
   ],
   "devDependencies": {
     "chai": "^4.1.2",
@@ -44,6 +46,7 @@
     "rollup": "^0.55.1",
     "rollup-plugin-buble": "^0.18.0",
     "rollup-plugin-uglify": "^3.0.0",
-    "standard": "^11.0.1"
+    "standard": "^11.0.1",
+    "semantic-release": "^15.1.4"
   }
 }
