@@ -21,7 +21,7 @@
     "compile:dev": "rollup -c rollup/dev.js",
     "compile:prod": "rollup -c rollup/prod.js",
     "build": "npm-run-all lint --parallel compile:*",
-    "test": "mocha",
+    "test": "mocha --require babel-core/register",
     "ci": "run-s clean build test",
     "semantic-release": "semantic-release"
   },
